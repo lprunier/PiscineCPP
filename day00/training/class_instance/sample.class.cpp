@@ -1,16 +1,20 @@
 #include <iostream>
 #include "sample.class.hpp"
 
-sample::sample(char p1, int p2, float p3) :
-a1(p1), a2(p2), a3(p3) {
+sample::sample(float const f) : pi(f), qd(42) {
     std::cout << "Constructor called." << std::endl;
-    std::cout << "this->a1: " << this->a1 << std::endl;
-    std::cout << "this->a2: " << this->a2 << std::endl;
-    std::cout << "this->a3: " << this->a3 << std::endl;
     return ;
 }
 
 sample::~sample(void) {
     std::cout << "Destructor called." << std::endl;
+    return ;
+}
+
+void    sample::bar(void) const {
+    std::cout << "this->pi: " << this->pi << std::endl;
+    std::cout << "this->qd: " << this->qd << std::endl;
+
+    // this->pi = 3.1415;
     return ;
 }

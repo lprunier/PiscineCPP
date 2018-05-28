@@ -4,12 +4,13 @@
 class sample {
 public:
 
-    char    a1;
-    int     a2;
-    float   a3;
+    float           pi;
+    int             qd; 
 
-    sample(char p1, int p2, float p3);
+    sample(float const f);
     ~sample(void);
+
+    void    bar(void) const;
 };
 
 #endif

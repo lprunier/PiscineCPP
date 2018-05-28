@@ -3,7 +3,9 @@
 
 int main(void) {
 
-    sample  instance('a', 13, 3.14f);
+    sample  instance(3.14);
+
+    instance.bar();
     
     return 0;
 }
