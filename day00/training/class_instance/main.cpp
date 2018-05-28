@@ -3,9 +3,15 @@
 
 int main(void) {
 
-    sample  instance(3.14);
+    sample  instance;
 
-    instance.bar();
+    instance.publicFoo = 42;
+    std::cout << "instance.publicFoo: " << instance.publicFoo << std::endl;
+    // instance._privateFoo = 42;
+    // std::cout << "instance._privateFoo: " << instance._privateFoo << std:endl;
+
+    instance.publicBar();
+    // instance._privateBar();
     
     return 0;
 }

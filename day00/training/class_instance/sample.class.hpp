@@ -2,15 +2,21 @@
 # define SAMPLE_CLASS_HPP
 
 class sample {
+
 public:
 
-    float           pi;
-    int             qd; 
+    int     publicFoo;
 
-    sample(float const f);
+    sample(void);
     ~sample(void);
 
-    void    bar(void) const;
+    void    publicBar(void) const;
+
+private:
+
+    int     _privateFoo;
+
+    void    _privateBar(void) const;
 };
 
 #endif
