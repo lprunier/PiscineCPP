@@ -5,16 +5,12 @@ class sample {
 
 public:
 
+    int     foo;
+
     sample(void);
     ~sample(void);
 
-    int     getFoo(void) const;
-    void    setFoo(int v);
-
-private:
-
-    int     _foo;
-
+    void    bar(void) const;
 };
 
 #endif
