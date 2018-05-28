@@ -3,7 +3,7 @@
 
 int main(void) {
 
-    sample  instance;
+    sample  instance('a', 13, 3.14f);
     
     return 0;
 }

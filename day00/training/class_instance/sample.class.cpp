@@ -1,22 +1,16 @@
 #include <iostream>
 #include "sample.class.hpp"
 
-sample::sample(void) {
+sample::sample(char p1, int p2, float p3) :
+a1(p1), a2(p2), a3(p3) {
     std::cout << "Constructor called." << std::endl;
-
-    this->foo = 42;
-    std::cout << "this->foo: " << this->foo << std::endl;
-
-    this->bar();
+    std::cout << "this->a1: " << this->a1 << std::endl;
+    std::cout << "this->a2: " << this->a2 << std::endl;
+    std::cout << "this->a3: " << this->a3 << std::endl;
     return ;
 }
 
 sample::~sample(void) {
     std::cout << "Destructor called." << std::endl;
-    return ;
-}
-
-void    sample::bar(void) {
-    std::cout << "Member function called." << std::endl;
     return ;
 }
