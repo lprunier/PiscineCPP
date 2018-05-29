@@ -45,9 +45,12 @@ void    search(book *phonebook) {
     std::cout << "Wich id did you choose? ";
     std::getline(std::cin, rep);
     
-    // if (rep.length() == 1 && rep[0] > '0' && rep[0] <= phonebook->get_nb_contacts()) {
-        contact contact = phonebook->get_contact(rep[0] - 1);
-        std::cout << "First name: " << contact.firstname << std::endl;
+    int id = rep[0] - '0' - 1;
+    if (rep.length() != 1 || id < 0 || id >= phonebook->get_nb_contacts())
+        std::cout << "Invalid id." << std::endl;
+    else {
+        contact contact = phonebook->get_contact(id);
+        std::cout << std::endl << "First name: " << contact.firstname << std::endl;
         std::cout << "Last name: " << contact.lastname << std::endl;
         std::cout << "Nickname: " << contact.nickname << std::endl;
         std::cout << "Login: " << contact.login << std::endl;
@@ -57,10 +60,8 @@ void    search(book *phonebook) {
         std::cout << "Birthday date: " << contact.birthday << std::endl;
         std::cout << "Favorite meal: " << contact.meal << std::endl;
         std::cout << "Underwear color: " << contact.underwear << std::endl;
-        std::cout << "Darkest secret: " << contact.secret << std::endl;
-    // }
-    // else
-    //     std::cout << "Invalid id." << std::endl;
+        std::cout << "Darkest secret: " << contact.secret << std::endl << std::endl;
+    }
 }
 
 int     main(void) {
