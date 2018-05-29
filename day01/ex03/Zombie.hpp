@@ -20,6 +20,7 @@ class   Zombie {
 public:
     
     Zombie(std::string type, std::string name);
+    Zombie(void);
     ~Zombie(void);
     
     std::string type;

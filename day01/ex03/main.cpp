@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lprunier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/29 17:07:27 by lprunier          #+#    #+#             */
-/*   Updated: 2018/05/29 17:07:28 by lprunier         ###   ########.fr       */
+/*   Created: 2018/05/29 18:12:00 by lprunier          #+#    #+#             */
+/*   Updated: 2018/05/29 18:12:02 by lprunier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_H
-# define ZOMBIE_H
+#include "Zombie.hpp"
+#include "ZombieHorde.hpp"
 
-# include <iostream>
-# include <string>
-
-class   Zombie {
-public:
-    
-    Zombie(std::string type, std::string name);
-    ~Zombie(void);
-    
-    std::string type;
-    std::string name;
-
-    void    announce(void) const;
-};
-
-#endif
+int main(void) {
+    std::cout << "BORN OF THE HORDE!" << std::endl;
+	ZombieHorde horde = ZombieHorde(10);
+	std::cout << "__________________" << std::endl;
+	horde.announce();
+	std::cout << "AND THE END..." << std::endl;
+}
