@@ -13,11 +13,11 @@
 #include "Brain.hpp"
 
 Brain::Brain(void) {
-    std::cout << "Brain created" << std::endl;
+    std::string moods [7] = {"happy", "sad", "in love", "hungry", "exited", "stressed", "angry"};
+    this->_mood = moods[std::time(NULL) % 7];
 }
 
 Brain::~Brain(void) {
-    std::cout << "Brain died" << std::endl;
 }
 
 std::string Brain::identify(void) const {

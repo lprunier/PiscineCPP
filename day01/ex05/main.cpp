@@ -10,12 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Brain.hpp"
+#include "Human.hpp"
 
 int main(void) {
-    Brain   bb;
+    Human   bob;
 
-    std::cout << bb.identify() << std::endl;
+    std::cout << bob.identify() << std::endl;
+    std::cout << bob.getBrain().identify() << std::endl;
 
     return 0;
 }

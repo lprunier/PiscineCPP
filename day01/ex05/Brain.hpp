@@ -21,8 +21,10 @@ class   Brain {
 public:
     Brain(void);
     ~Brain(void);
-    std::string think;
     std::string identify(void) const;
+
+public:
+    std::string _mood;
 };
 
 #endif
