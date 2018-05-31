@@ -27,8 +27,8 @@ public:
     FragTrap        &operator=(FragTrap const &copy);
     unsigned int    rangedAttack(std::string const & target);
     unsigned int    meleeAttack(std::string const & target);
-    void   takeDamage(unsigned int amount);
-    // int    beRepaired(unsigned int amount);
+    void    takeDamage(unsigned int amount);
+    void    beRepaired(unsigned int amount);
 
     int         get_hit(void) const;
     int         get_max_hit(void) const;
@@ -39,6 +39,13 @@ public:
     int         get_melee_attack_damage(void) const;
     int         get_ranged_attack_damage(void) const;
     int         get_armor_damage_reduction(void) const;
+
+    void        baby_dolls_eyes(std::string const &target);
+    void        bubble(std::string const &target);
+    void        metronome(std::string const &target);
+    void        magic_coat(std::string const &target);
+    void        splash(std::string const &target);
+    void        vaulthunter_dot_exe(std::string const &target);
 
 private:
 
