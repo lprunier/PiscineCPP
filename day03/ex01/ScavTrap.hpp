@@ -47,7 +47,7 @@ public:
     void        puzzle(std::string const &target);
     void        challengeNewcomer(std::string const &target);
 
-  private:
+private:
 
     int         _hit;
     int         _max_hit;
