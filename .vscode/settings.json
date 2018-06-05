@@ -9,6 +9,8 @@
         "typeinfo": "cpp",
         "algorithm": "cpp",
         "random": "cpp",
-        "locale": "cpp"
+        "locale": "cpp",
+        "__functional_03": "cpp",
+        "functional": "cpp"
     }
 }
