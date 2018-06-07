@@ -10,11 +10,11 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = whatever
+NAME = iter
 CC = g++
 FLG = -Wall -Wextra -Werror
 
-SRC = whatever.cpp
+SRC = iter.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
