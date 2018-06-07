@@ -15,8 +15,7 @@
 struct Data { std::string s1; int n; std::string s2; };
 struct AllocData { char s1[8]; int n; char s2[8]; };
 
-void * serialize( void )
-{
+void * serialize( void ) {
 	AllocData *data = new AllocData;
 	char	rand_alpha[] = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	int	len = sizeof(rand_alpha) - 1;
@@ -31,8 +30,7 @@ void * serialize( void )
 	return reinterpret_cast<void*>(data);
 }
 
-Data * deserialize( void * raw )
-{
+Data * deserialize( void * raw ) {
 	Data	*data = new Data;
 	char	*s1 = reinterpret_cast<char*>(raw);
 	char	*s2 = s1 + 8 * sizeof(char) + sizeof(int);
@@ -45,12 +43,11 @@ Data * deserialize( void * raw )
 	return data;
 }
 
-int main( void )
-{
+int main( void ) {
 	Data	*data = deserialize(serialize());
 
 	std::cout << "Data:" << std::endl;
-	std::cout << "  s1 -> " << data->s1 << std::endl;
-	std::cout << "  n  -> " << data->n << std::endl;
-	std::cout << "  s2 -> " << data->s2 << std::endl;
+	std::cout << "s1 -> " << data->s1 << std::endl;
+	std::cout << "n  -> " << data->n << std::endl;
+	std::cout << "s2 -> " << data->s2 << std::endl;
 }
