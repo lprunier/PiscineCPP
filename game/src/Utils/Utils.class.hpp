@@ -2,6 +2,7 @@
 #define UTILS_H
 
 #include <string>
+#include <chrono>
 
 // Local includes
 #include "../GameEntities/Position.class.hpp"

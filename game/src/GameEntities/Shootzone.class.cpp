@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 #include "Shootzone.class.hpp"
 
 Shootzone::Shootzone( void ) : width(0) , height(0) {
